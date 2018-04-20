@@ -1,0 +1,60 @@
+de
+https://www.tutorialspoint.com/typescript/index.htm
+
+https://www.tutorialspoint.com/typescript/typescript_overview.htm
+
+. Language
+. Compiler
+. Language Service
+
+declaration files == header files C/C++/ObjC
+
+1. syntax
+https://www.tutorialspoint.com/typescript/typescript_basic_syntax.htm
+TS program composed of:
+. Modules
+. Functions
+. Variables
+. Statements and Expressions
+. Comments
+
+* aprende las katas de above!
+
+* aprende las keywords
+
+TS and Object Orientation
+object: real time representation of any entity
+    . state: attributes of an object
+    . behavior: how object will act
+    . identity: unique value, distinguishes from similar objects
+Class: blueprint for creating objects, encapsulates data for the object
+Method: facilitate communication between objects
+
+?? Function?
+
+** KATA 1_syntax.TS
+y expande a entrada y salida!
+
+
+2. Variables
+var [identifier] : [type] = value ;
+
+* ver type assertions, son como casting pero para compile time not runtime!
+
+3. Functions
+
+function function_name (param1[:type], paramN[:type])
+
+* Rest paramenters
+dont restrict the number of values to pass to a function, all the same type
+
+* Anonymous Function
+
+* Function constructor
+
+* recursion and typescript Functions
+
+* !! Lambda Functions
+
+
+
