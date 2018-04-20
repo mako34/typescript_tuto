@@ -1,6 +1,9 @@
 
 
 function disp_details(id:number, name:string, mail_id?:string) {
+
+    console.log('disp_details');
+
     console.log('id:', id);
     console.log('nombre:', name);
 
@@ -19,6 +22,9 @@ disp_details(43,'tkt', 'mail@sa.net');
 // REST PARAMETERS
 
 function addNumbers(...nums:number[]){
+
+    console.log('REST PARAMETERS / addNumbers');
+
     var i;
     var sum:number = 0;
 
@@ -27,7 +33,105 @@ function addNumbers(...nums:number[]){
     }
 
     console.log('tu suma', sum)
+
+    console.log('**********');
+
 }
 
 addNumbers(1,2,3);
 addNumbers(10,20,52,30,52,54,55)
+
+
+//Default parameters
+function calculate_discount(price:number, rate:number = 0.5){
+
+    console.log('Default parameters / calculate_discount');
+
+    var discount = price * rate;
+    console.log('Discount ammount: ',discount);
+
+    console.log('**********');
+}
+calculate_discount(1000);
+calculate_discount(1000, 0.3);
+
+//Anonymous function
+var msg = function() {
+    console.log('Anonymous_function / function');
+
+    return 'hola mundo';
+}
+console.log(msg());
+
+var res = function(a:number, b:number){
+    return a*b;
+}
+console.log(res(12,2));
+
+//FUNCTION CONSTRUCTOR
+var myFunction = new Function("a", "b", "return a * b");
+var x = myFunction(4, 3);
+console.log(x);
+
+//RECURSION
+function factorial(number) {
+    console.log('RECURSION / function');
+
+    if (number <= 0) {
+        return 1;
+    } else {
+        return (number * factorial(number - 1));
+    }
+};
+console.log(factorial(6));
+
+//anonymous recursive function
+// (function ( {
+//     var x = "hiho";
+//     console.log(x)
+// }))()
+
+// LAMBDA FUNCTIONS
+// paremeters + fat arrow => (goes to operator) + statements
+// ( [param1, param2, ...paramN] ) => statement
+
+var foo = (x:number) => 10 + x
+console.log(foo(100));
+
+
+//LAMBDA_STATEMENT
+var foo2 = (x:number) => {
+    console.log('LAMBDA_STATEMENT / foo2');
+
+    x = 10 + x
+    console.log(x)
+    console.log('**********');
+}
+foo2(120);
+
+//SYNTACTIC_VARIATIONS
+var func = (x) => {
+    console.log('SYNTACTIC_VARIATIONS / func');
+
+    if(typeof x == "number"){
+        console.log(x+" is numeric")
+    } else if (typeof x=="string") {
+        console.log(x+" is a string");
+    }
+
+    console.log('**********');
+}
+func(12);
+func("mako");
+
+//empty_param_lambda
+var disp = () => {
+    console.log('empty_param_lambda / disp');
+
+    console.log ("func called invoked");
+
+    console.log('**********');
+}
+disp();
+
+ 
